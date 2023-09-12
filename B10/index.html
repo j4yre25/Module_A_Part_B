@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+
+        .star-container{
+            width: 750px;
+            height: 150px;
+            position: relative;
+            display: flex;
+        }
+
+        span{
+            width: 10%;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .on, .off{
+            position: absolute;
+            z-index: -1;
+            height: 100%;
+        }
+
+        .on{
+            background-image: url(stars.png);
+            width: 100%;
+        }
+
+        .off{
+            background-image: url(star-full.png);
+            width: 0%;
+            transition: all 1s;
+        }
+
+
+        span:nth-child(1):hover ~ .off{
+            width: 10%;
+        }
+        span:nth-child(2):hover ~ .off{
+            width: 20%;
+        }
+        span:nth-child(3):hover ~ .off{
+            width: 30%;
+        }
+        span:nth-child(4):hover ~ .off{
+            width: 40%;
+        }
+        span:nth-child(5):hover ~ .off{
+            width: 50%;
+        }
+        span:nth-child(6):hover ~ .off{
+            width: 60%;
+        }
+        span:nth-child(7):hover ~ .off{
+            width: 70%;
+        }
+        span:nth-child(8):hover ~ .off{
+            width: 80%;
+        }
+        span:nth-child(9):hover ~ .off{
+            width: 90%;
+        }
+        span:nth-child(10):hover ~ .off{
+            width: 100%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="star-container">
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        <div class="on"></div>
+        <div class="off"></div>
+    </div>
+    
+</body>
+</html>

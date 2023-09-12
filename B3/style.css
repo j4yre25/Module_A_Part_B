@@ -1,0 +1,34 @@
+:root {
+    counter-reset: over;
+}
+
+
+.photo-item:nth-child(9),
+.photo-item:nth-child(9)~ .photo-item {
+    grid-row: 3;
+    grid-column: 3;
+}
+
+.photo-item:nth-child(9)~ .photo-item {
+    counter-increment: sample;
+}
+
+
+.photo-item:nth-child(9)~ .photo-item:last-child {
+    position: relative;
+}
+
+
+.photo-item:nth-child(9)~ .photo-item:last-child::after {
+    content: '+' counter(sample);
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}

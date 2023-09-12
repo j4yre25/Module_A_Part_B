@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .flag {
+        background-color: #fff;
+        width: 600px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .circle {
+        width: 150px;
+        position: relative;
+        border-radius: 100%;
+        border-top: 75px solid red;
+        border-bottom: 75px solid blue;
+        transform: rotate(25deg);
+    }
+
+    .circle::after {
+        content: '';
+        position: absolute;
+        width: 75px;
+        height: 75px;
+        border-radius: 100%;
+        background-color: blue;
+        top: -35px;
+        right: 0;
+    }
+    
+
+    .circle::before {
+        content: '';
+        position: absolute;
+        width: 75px;
+        height: 75px;
+        border-radius: 100%;
+        background-color: red;
+        top: -35px;
+        left: 0;
+    }
+
+    span {
+        display: inline-block;
+        background-color: black;
+        width: 10px;
+        height: 80px;
+    }
+
+    .x2 {
+        width: 10px;
+        background-color: #fff;
+        border-top: solid black 37px;
+        border-bottom: solid black 37px;
+    }
+
+    .line {
+        position: absolute;
+    }
+
+
+    .line-1 {
+        top: 240px;
+        left: 620px;
+        transform: rotate(45deg);
+    }
+
+    .line-2 {
+        top: 240px;
+        right: 620px;
+        transform: rotate(-45deg);
+    }
+
+    .line-3 {
+        bottom: 240px;
+        left: 620px;
+        transform: rotate(-45deg);
+    }
+
+    .line-4 {
+        bottom: 240px;
+        right: 620px;
+        transform: rotate(45deg);
+    }
+
+
+    
+</style>
+
+
+<body>
+    <div class="flag">
+        <div class="circle"></div>
+        <div class="line line-1">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="line line-2">
+            <span class="x2"></span>
+            <span></span>
+            <span class="x2"></span>
+        </div>
+        <div class="line line-3">
+            <span></span>
+            <span class="x2"></span>
+            <span></span>
+        </div>
+        <div class="line line-4">
+            <span class="x2"></span>
+            <span class="x2"></span>
+            <span class="x2"></span>
+        </div>
+    </div>
+
+</body>
+
+</html>
